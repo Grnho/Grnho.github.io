@@ -1,0 +1,263 @@
+/* Global Styles */
+:root {
+  --max-width: 980px;
+  --primary-color: #1e1e1e;
+  --bg-color: #f6f7fb;
+  --link-color: #0066cc;
+}
+
+/* Body styling with serif font requirement */
+body {
+  font-family: "Georgia", "Palatino Linotype", "Book Antiqua", serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+/* Spacing requirement: add padding around page content */
+header,
+main,
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+/* Header styling */
+header {
+  border-bottom: 2px solid #d1d5db;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin: 0.5rem 0;
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+/* Navigation styling - at least 4 elements with style changes */
+nav {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #0066cc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #e5e7eb;
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+nav a:active {
+  background-color: #d1d5db;
+}
+
+/* Main content styling */
+main {
+  min-height: 60vh;
+}
+
+/* Heading styles - two levels of headings */
+h1 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  color: #111827;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: #1f2937;
+  border-left: 4px solid #0066cc;
+  padding-left: 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  color: #374151;
+}
+
+/* Paragraph styling */
+p {
+  margin: 1rem 0;
+}
+
+/* List styling */
+ul,
+ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+/* Description list styling */
+dl {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #0066cc;
+}
+
+dt:first-child {
+  margin-top: 0;
+}
+
+dd {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Image styling - not background images, these are <img> tags */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Figure and figcaption styling */
+figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Unique layout for gallery page - CSS Grid */
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.grid-gallery figure {
+  margin: 0;
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Link styling - external hyperlink requirement */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #0052a3;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #7c3aed;
+}
+
+/* Text styling variations - at least 4 elements */
+strong {
+  font-weight: bold;
+  color: #1f2937;
+}
+
+em {
+  font-style: italic;
+  color: #4338ca;
+}
+
+small {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Footer styling */
+footer {
+  border-top: 2px solid #d1d5db;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Section spacing */
+section {
+  margin: 2rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  nav {
+    flex-direction: column;
+  }
+  
+  nav a {
+    width: fit-content;
+  }
+  
+  .grid-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Accessibility - focus styles */
+*:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0066cc;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
